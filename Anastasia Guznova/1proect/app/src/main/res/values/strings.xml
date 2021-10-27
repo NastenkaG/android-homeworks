@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">1 proect</string>
+    <string name="welcome">Welcome Back!</string>
+    <string name="name">Enter your email</string>
+    <string name="password">Confirm password</string>
+    <string name="forgot">Forgot Password!</string>
+    <string name="haveAnAccount">Don’t have an account?</string>
+    <string name="sing">SignUp</string>
+    <string name="singButton">Sign in</string>
+    <string name="slashGet">Let’s get things done on time</string>
+    <string name="mnogoText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor, est a aliquam. Pretium netus </string>
+    <string name="start">Get Started</string>
+    <string name="welcomeOnboard">Welcome Onboard!</string>
+    <string name="vopros">We help you meet up you tasks on time.</string>
+    <string name="register">Register</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="fullName">Enter your full name</string>
+    <string name="vopros2">Already have an account?</string>
+    <string name="privetHome">Welcome</string>
+    <string name="list">Tasks List</string>
+</resources>
