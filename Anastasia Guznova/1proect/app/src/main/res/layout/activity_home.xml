@@ -8,24 +8,23 @@
     tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="418dp"
-        android:layout_height="274dp"
-        android:background="@drawable/fon"
+        android:id="@+id/prof_imageFon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/krugihome"
+        android:background="@drawable/circleshome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/prof_imageHumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="137dp"
@@ -33,7 +32,6 @@
         android:layout_marginEnd="138dp"
         android:background="@drawable/men"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/prof_textWelcom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -57,9 +55,8 @@
         android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="@+id/prof_imageHumen"
+        app:layout_constraintTop_toBottomOf="@+id/prof_imageHumen" />
 
     <TextView
         android:id="@+id/textViewName"
@@ -69,9 +66,9 @@
         android:layout_marginTop="24dp"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="@+id/prof_imageHumen"
+        app:layout_constraintStart_toEndOf="@+id/prof_textWelcom"
+        app:layout_constraintTop_toBottomOf="@+id/prof_imageHumen" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,9 +78,8 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/prof_imageFon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,56 +10,51 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/krugi"
+        android:background="@drawable/circles"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/start_imagePeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="87dp"
         android:layout_marginTop="148dp"
         android:layout_marginEnd="87dp"
-        android:background="@drawable/cheloveki"
+        android:background="@drawable/startpeople"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/start_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="@string/slashGet"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="@+id/start_imagePeople"
+        app:layout_constraintStart_toStartOf="@+id/start_imagePeople"
+        app:layout_constraintTop_toBottomOf="@+id/start_imagePeople"/>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/start_textGreeting"
         android:layout_width="374dp"
         android:layout_height="134dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="33dp"
         android:text="@string/mnogoText"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_text" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button1"
+        android:id="@+id/startButton"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="33dp"
@@ -71,8 +66,7 @@
         android:textColor="@color/black"
         app:elevation="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/start_textGreeting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,8 @@
     <string name="vopros2">Already have an account?</string>
     <string name="privetHome">Welcome</string>
     <string name="list">Tasks List</string>
+    <string name="validEmail1">Введите настоящую почту</string>
+    <string name="validEmail2">Введите почту хорошей длины</string>
+    <string name="validPass">Проверьте длину пароля</string>
+    <string name="validPass2">Пароли не совпадают</string>
 </resources>

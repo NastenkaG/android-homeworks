@@ -10,20 +10,20 @@ import android.content.Intent;
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    val prov = proverka()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.button.setOnClickListener {
-            val email = binding.textInputEditText1.text.toString()
-            val password = binding.textInputEditText2.text.toString()
+        binding.logButton.setOnClickListener {
+            val valid = validation()
+            val email = binding.logtextInputEditEmail.text.toString()
+            val password = binding.logtextInputEditPassword.text.toString()
 
             when{
-                prov.provEmail1(email) -> binding.textInputEditText1.error = "Введите настоящую почту"
-                prov.provEmail2(email) -> binding.textInputEditText1.error = "Введите почту хорошей длины"
-                prov.provPassword(password) -> binding.textInputEditText2.error = "Проверьте длину пароля"
-                else -> {Toast.makeText(this, "Все хорошо", Toast.LENGTH_SHORT).show()
+                valid.validEmail1(email) -> binding.logtextInputEditEmail.error = getString(R.string.validEmail1)
+                valid.validEmail2(email) -> binding.logtextInputEditEmail.error = getString(R.string.validEmail2)
+                valid.validPassword(password) -> binding.logtextInputEditPassword.error = getString(R.string.validPass)
+                else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)
                     startActivity(intent)}

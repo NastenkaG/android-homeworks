@@ -13,8 +13,8 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val enterName = intent.extras?.getString("Name")
-        binding.textViewName.text = enterName
+        val userName = intent.extras?.getString("Name")
+        binding.textViewName.text = userName
 
         binding.icon.setOnClickListener{
             finish()
