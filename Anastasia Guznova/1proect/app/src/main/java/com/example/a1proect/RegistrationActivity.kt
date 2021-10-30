@@ -17,9 +17,12 @@ class RegistrationActivity : AppCompatActivity() {
             val repeatedPassword = binding.textPassword2.text.toString()
             val email = binding.textEmailRegistration.text.toString()
             when {
-                valid.validateEmail(email) -> binding.textEmailRegistration.error = getString(R.string.validEmail1)
-                valid.validatePassword(password) -> binding.textPassword1.error = getString(R.string.validPass)
-                valid.validatePasswordRegistration(password, repeatedPassword) -> binding.textPassword2.error = getString(R.string.validPass2)
+                valid.validateEmail(email) -> binding.textEmailRegistration.error =
+                    getString(R.string.validEmail1)
+                valid.validatePassword(password) -> binding.textPassword1.error =
+                    getString(R.string.validPass)
+                valid.validatePasswordRegistration(password, repeatedPassword) ->
+                    binding.textPassword2.error = getString(R.string.validPass2)
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)
