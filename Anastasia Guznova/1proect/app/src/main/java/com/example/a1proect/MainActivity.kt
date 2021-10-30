@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.a1proect.databinding.ActivityMainBinding
-import  com.google.android.material.button.MaterialButton
+import com.google.android.material.button.MaterialButton
 import android.content.Intent;
 
 class MainActivity : AppCompatActivity() {
@@ -15,14 +15,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.logButton.setOnClickListener {
-            val valid = validation()
-            val email = binding.logtextInputEditEmail.text.toString()
-            val password = binding.logtextInputEditPassword.text.toString()
+            val valid = Validation()
+            val email = binding.logTextInputEditEmail.text.toString()
+            val password = binding.logTextInputEditPassword.text.toString()
 
             when{
-                valid.validEmail1(email) -> binding.logtextInputEditEmail.error = getString(R.string.validEmail1)
-                valid.validEmail2(email) -> binding.logtextInputEditEmail.error = getString(R.string.validEmail2)
-                valid.validPassword(password) -> binding.logtextInputEditPassword.error = getString(R.string.validPass)
+                valid.validateEmail(email) -> binding.logTextInputEditEmail.error = getString(R.string.validEmail1)
+                valid.validatePassword(password) -> binding.logTextInputEditPassword.error = getString(R.string.validPass)
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)

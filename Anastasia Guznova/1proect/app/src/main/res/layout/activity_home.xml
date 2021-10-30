@@ -8,7 +8,7 @@
     tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/prof_imageFon"
+        android:id="@+id/profImageBackground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/prof_imageHumen"
+        android:id="@+id/profImageHumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="137dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/icon"
+        android:id="@+id/iconExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
@@ -46,17 +46,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/prof_textWelcom"
+        android:id="@+id/profTextWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="5dp"
-        android:text="@string/privetHome"
+        android:text="@string/welcomeHome"
         android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="@+id/prof_imageHumen"
-        app:layout_constraintTop_toBottomOf="@+id/prof_imageHumen" />
+        app:layout_constraintStart_toStartOf="@+id/profImageHumen"
+        app:layout_constraintTop_toBottomOf="@+id/profImageHumen" />
 
     <TextView
         android:id="@+id/textViewName"
@@ -66,9 +66,9 @@
         android:layout_marginTop="24dp"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/prof_imageHumen"
-        app:layout_constraintStart_toEndOf="@+id/prof_textWelcom"
-        app:layout_constraintTop_toBottomOf="@+id/prof_imageHumen" />
+        app:layout_constraintEnd_toEndOf="@+id/profImageHumen"
+        app:layout_constraintStart_toEndOf="@+id/profTextWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/profImageHumen" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prof_imageFon" />
+        app:layout_constraintTop_toBottomOf="@+id/profImageBackground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

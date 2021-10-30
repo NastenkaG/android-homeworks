@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/start_imagePeople"
+        android:id="@+id/startImagePeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="87dp"
@@ -27,46 +27,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/start_text"
+        android:id="@+id/startText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="@string/slashGet"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/start_imagePeople"
-        app:layout_constraintStart_toStartOf="@+id/start_imagePeople"
-        app:layout_constraintTop_toBottomOf="@+id/start_imagePeople"/>
+        app:layout_constraintEnd_toEndOf="@+id/startImagePeople"
+        app:layout_constraintStart_toStartOf="@+id/startImagePeople"
+        app:layout_constraintTop_toBottomOf="@+id/startImagePeople"/>
 
     <TextView
-        android:id="@+id/start_textGreeting"
+        android:id="@+id/startTextGreeting"
         android:layout_width="374dp"
         android:layout_height="134dp"
-        android:layout_marginStart="33dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="33dp"
-        android:text="@string/mnogoText"
+        android:text="@string/startText"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_text" />
+        app:layout_constraintEnd_toEndOf="@+id/startText"
+        app:layout_constraintStart_toStartOf="@+id/startText"
+        app:layout_constraintTop_toBottomOf="@+id/startText" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/startButton"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellowY"
-        android:elevation="60dp"
         android:text="@string/start"
         android:textColor="@color/black"
+        android:textAllCaps="false"
         app:elevation="60dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_textGreeting" />
+        app:layout_constraintTop_toBottomOf="@+id/startTextGreeting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

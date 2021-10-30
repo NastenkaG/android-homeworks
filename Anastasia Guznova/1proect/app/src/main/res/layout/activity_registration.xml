@@ -15,76 +15,76 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/reg_textWelcome"
+        android:id="@+id/regTextWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="98dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="98dp"
         android:text="@string/welcomeOnboard"
         android:textColor="@color/black"
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/reg_textTask"
+        android:id="@+id/regTextTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/vopros"
+        android:text="@string/registrationIssue"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/reg_textWelcome"
-        app:layout_constraintStart_toStartOf="@+id/reg_textWelcome"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textWelcome" />
+        app:layout_constraintEnd_toEndOf="@+id/regTextWelcome"
+        app:layout_constraintStart_toStartOf="@+id/regTextWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/regTextWelcome" />
 
     <TextView
-        android:id="@+id/reg_textAcc"
+        android:id="@+id/regTextAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:text="@string/vopros2"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/issue2"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/regButton"
         app:layout_constraintTop_toBottomOf="@+id/regButton" />
 
     <TextView
-        android:id="@+id/Registration"
+        android:id="@+id/regSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/sing"
+        android:layout_marginTop="24dp"
+        android:text="@string/sign"
         android:textColor="@color/yellowY"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/regButton"
-        app:layout_constraintStart_toEndOf="@+id/reg_textAcc"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/regTextAcc"
         app:layout_constraintTop_toBottomOf="@+id/regButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/regButton"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellowY"
-        android:elevation="60dp"
         android:text="@string/register"
         android:textColor="@color/black"
-        android:textSize="17sp"
+        android:textSize="20sp"
+        android:textAllCaps="false"
         app:elevation="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textInputPass2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/regTextInputPass2" />
 
     <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/reg_textInputName"
+        android:id="@+id/regTextInputName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -99,10 +99,10 @@
         app:boxCornerRadiusTopStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textTask">
+        app:layout_constraintTop_toBottomOf="@+id/regTextTask">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textFullNameRegistr"
+            android:id="@+id/textFullNameRegistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/fullName"
@@ -112,8 +112,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/reg_textInputEmail"
+        android:id="@+id/regTextInputEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -125,12 +124,12 @@
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/reg_textInputName"
-        app:layout_constraintStart_toStartOf="@+id/reg_textInputName"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textInputName">
+        app:layout_constraintEnd_toEndOf="@+id/regTextInputName"
+        app:layout_constraintStart_toStartOf="@+id/regTextInputName"
+        app:layout_constraintTop_toBottomOf="@+id/regTextInputName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textEmailRegistr"
+            android:id="@+id/textEmailRegistration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -138,10 +137,9 @@
             android:textSize="18sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/reg_textInputPass"
+        android:id="@+id/regTextInputPass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -153,9 +151,9 @@
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/reg_textInputEmail"
-        app:layout_constraintStart_toStartOf="@+id/reg_textInputEmail"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textInputEmail">
+        app:layout_constraintEnd_toEndOf="@+id/regTextInputEmail"
+        app:layout_constraintStart_toStartOf="@+id/regTextInputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/regTextInputEmail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword1"
@@ -168,7 +166,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/reg_textInputPass2"
+        android:id="@+id/regTextInputPass2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -179,9 +177,9 @@
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
-        app:layout_constraintEnd_toEndOf="@+id/reg_textInputPass"
-        app:layout_constraintStart_toStartOf="@+id/reg_textInputPass"
-        app:layout_constraintTop_toBottomOf="@+id/reg_textInputPass">
+        app:layout_constraintEnd_toEndOf="@+id/regTextInputPass"
+        app:layout_constraintStart_toStartOf="@+id/regTextInputPass"
+        app:layout_constraintTop_toBottomOf="@+id/regTextInputPass">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword2"
@@ -191,9 +189,5 @@
             android:textColorHint="@color/black"
             android:textSize="18sp"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

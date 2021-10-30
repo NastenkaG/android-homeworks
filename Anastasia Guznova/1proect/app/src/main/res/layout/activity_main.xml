@@ -10,10 +10,10 @@
 
 
     <TextView
-        android:id="@+id/logtextWelcom"
+        android:id="@+id/logTextWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="140dp"
         android:text="@string/welcome"
         android:textColor="@color/black"
         android:textSize="22sp"
@@ -31,18 +31,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/logimage"
+        android:id="@+id/logImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
         android:background="@drawable/loghuman"
-        app:layout_constraintEnd_toEndOf="@+id/logtextWelcom"
-        app:layout_constraintStart_toStartOf="@+id/logtextWelcom"
-        app:layout_constraintTop_toBottomOf="@+id/logtextWelcom" />
+        app:layout_constraintEnd_toEndOf="@+id/logTextWelcome"
+        app:layout_constraintStart_toStartOf="@+id/logTextWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/logTextWelcome" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/logtextInputEmail"
+        android:id="@+id/logTextInputEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,10 +58,10 @@
         app:boxCornerRadiusTopStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logimage">
+        app:layout_constraintTop_toBottomOf="@+id/logImage">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/logtextInputEditEmail"
+            android:id="@+id/logTextInputEditEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name"
@@ -70,7 +70,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/logtextInputPassword"
+        android:id="@+id/logTextInputPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -86,10 +86,10 @@
         app:boxCornerRadiusTopStart="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logtextInputEmail">
+        app:layout_constraintTop_toBottomOf="@+id/logTextInputEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/logtextInputEditPassword"
+            android:id="@+id/logTextInputEditPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -98,7 +98,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/logtextForgotPass"
+        android:id="@+id/logTextForgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
@@ -108,10 +108,10 @@
         android:textColor="@color/yellowY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logtextInputPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/logTextInputPassword" />
 
     <TextView
-        android:id="@+id/logtextDontAcc"
+        android:id="@+id/logTextDontAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
@@ -126,29 +126,30 @@
         android:id="@+id/singUpRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sing"
+        android:text="@string/sign"
         android:textColor="@color/yellowY"
-        app:layout_constraintEnd_toEndOf="@+id/logtextDontAcc"
-        app:layout_constraintStart_toStartOf="@+id/logtextDontAcc"
-        app:layout_constraintTop_toBottomOf="@+id/logtextDontAcc"
+        app:layout_constraintEnd_toEndOf="@+id/logTextDontAcc"
+        app:layout_constraintStart_toStartOf="@+id/logTextDontAcc"
+        app:layout_constraintTop_toBottomOf="@+id/logTextDontAcc"
         />
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/logButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="33dp"
         android:backgroundTint="@color/yellowY"
-        android:elevation="60dp"
         android:text="@string/singButton"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textAllCaps="false"
         app:elevation="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logtextForgotPass"
+        app:layout_constraintTop_toBottomOf="@+id/logTextForgotPass"
         />
 
 
