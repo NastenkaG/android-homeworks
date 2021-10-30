@@ -2,9 +2,7 @@ package com.example.a1proect
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.a1proect.databinding.ActivityMainBinding
-import com.google.android.material.button.MaterialButton
 import android.content.Intent;
 
 class MainActivity : AppCompatActivity() {

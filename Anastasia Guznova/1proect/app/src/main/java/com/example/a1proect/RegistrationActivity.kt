@@ -3,8 +3,6 @@ package com.example.a1proect
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.example.a1proect.databinding.ActivityMainBinding
 import com.example.a1proect.databinding.ActivityRegistrationBinding
 
 class RegistrationActivity : AppCompatActivity() {
