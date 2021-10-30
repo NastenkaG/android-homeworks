@@ -12,9 +12,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         val userName = intent.extras?.getString("Name")
         binding.textViewName.text = userName
-        binding.iconExit.setOnClickListener{
+        binding.iconExit.setOnClickListener {
             finish()
         }
-
     }
 }

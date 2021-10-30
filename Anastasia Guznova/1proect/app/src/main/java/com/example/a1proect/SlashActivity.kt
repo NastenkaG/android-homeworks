@@ -12,7 +12,7 @@ class SlashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySlashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.startButton.setOnClickListener{
+        binding.startButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
