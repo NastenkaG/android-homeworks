@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
             val email = binding.logTextInputEditEmail.text.toString()
             val password = binding.logTextInputEditPassword.text.toString()
             when {
-                valid.validateEmail(email) -> binding.logTextInputEditEmail.error =
-                    getString(R.string.validEmail1)
-                valid.validatePassword(password) -> binding.logTextInputEditPassword.error =
-                    getString(R.string.validPass)
+                valid.validateEmail(email) ->
+                    binding.logTextInputEditEmail.error = getString(R.string.validEmail1)
+                valid.validatePassword(password) ->
+                    binding.logTextInputEditPassword.error = getString(R.string.validPass)
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)
