@@ -7,9 +7,7 @@ import com.example.a1proect.databinding.ActivityMainBinding
 import com.example.a1proect.databinding.ActivitySlashBinding
 
 class SlashActivity : AppCompatActivity() {
-
     lateinit var binding: ActivitySlashBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySlashBinding.inflate(layoutInflater)

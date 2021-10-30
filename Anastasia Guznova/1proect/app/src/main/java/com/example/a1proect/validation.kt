@@ -9,11 +9,8 @@ class Validation {
         if(password.length <= 7) return true
         else return false
     }
-
     fun validatePasswordRegistration(pass1: String, pass2: String) : Boolean{
         if(pass1 != pass2) return true
         else return false
     }
-
-
 }

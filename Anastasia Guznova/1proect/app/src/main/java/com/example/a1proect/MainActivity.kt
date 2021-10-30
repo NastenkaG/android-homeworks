@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
             val valid = Validation()
             val email = binding.logTextInputEditEmail.text.toString()
             val password = binding.logTextInputEditPassword.text.toString()
-
             when{
                 valid.validateEmail(email) -> binding.logTextInputEditEmail.error = getString(R.string.validEmail1)
                 valid.validatePassword(password) -> binding.logTextInputEditPassword.error = getString(R.string.validPass)
@@ -32,10 +31,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
-
-
     }
-
 }
 
 
