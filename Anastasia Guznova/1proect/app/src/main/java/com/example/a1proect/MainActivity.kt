@@ -1,9 +1,8 @@
 package com.example.a1proect
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.a1proect.databinding.ActivityMainBinding
 import android.content.Intent
+import com.example.a1proect.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -23,7 +22,8 @@ class MainActivity : AppCompatActivity() {
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)
-                    startActivity(intent)}
+                    startActivity(intent)
+                }
             }
         }
         binding.singUpRegistration.setOnClickListener {
@@ -32,6 +32,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
-
-

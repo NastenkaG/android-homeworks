@@ -1,5 +1,4 @@
 package com.example.a1proect
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,9 +34,12 @@ class RegistrationActivity : AppCompatActivity() {
             val repeatedPassword2 = binding.textPassword2.text.toString()
             val email2 = binding.textEmailRegistration.text.toString()
             when {
-                valid.validateEmail(email2) -> binding.textEmailRegistration.error = getString(R.string.validEmail1)
-                valid.validatePassword(password2) -> binding.textPassword1.error = getString(R.string.validPass)
-                valid.validatePasswordRegistration(password2, repeatedPassword2) -> binding.textPassword2.error = getString(R.string.validPass2)
+                valid.validateEmail(email2) ->
+                    binding.textEmailRegistration.error = getString(R.string.validEmail1)
+                valid.validatePassword(password2) ->
+                    binding.textPassword1.error = getString(R.string.validPass)
+                valid.validatePasswordRegistration(password2, repeatedPassword2) ->
+                    binding.textPassword2.error = getString(R.string.validPass2)
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
