@@ -1,7 +1,7 @@
 package com.example.a1proect
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.a1proect.databinding.ActivitySlashBinding
 
 class SlashActivity : AppCompatActivity() {
