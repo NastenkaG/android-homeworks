@@ -1,7 +1,7 @@
 package com.example.a1proect
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import com.example.a1proect.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
