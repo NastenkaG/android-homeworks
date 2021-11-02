@@ -1,4 +1,5 @@
 package com.example.a1proect
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.logButton.setOnClickListener {
-            val valid = Validation()
+            val valid = Validator()
             val email = binding.logTextInputEditEmail.text.toString()
             val password = binding.logTextInputEditPassword.text.toString()
             when {
