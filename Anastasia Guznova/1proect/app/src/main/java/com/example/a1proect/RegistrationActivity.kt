@@ -18,11 +18,11 @@ class RegistrationActivity : AppCompatActivity() {
             val email = binding.textEmailRegistration.text.toString()
             when {
                 valid.validateEmail(email) ->
-                    binding.textEmailRegistration.error = getString(R.string.validEmail1)
+                    binding.textEmailRegistration.error = getString(R.string.error_email)
                 valid.validatePassword(password) ->
-                    binding.textPasswordEnter.error = getString(R.string.validPass)
+                    binding.textPasswordEnter.error = getString(R.string.error_password)
                 valid.validateIdenticalPassword(password, repeatedPassword) ->
-                    binding.textPasswordConfirm.error = getString(R.string.validPass2)
+                    binding.textPasswordConfirm.error = getString(R.string.error_coincidence_password)
                 else -> {
                     val intent = Intent(this, HomeActivity::class.java)
                     intent.putExtra("Name", email)
@@ -31,7 +31,7 @@ class RegistrationActivity : AppCompatActivity() {
             }
         }
         binding.regSignUpClick.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

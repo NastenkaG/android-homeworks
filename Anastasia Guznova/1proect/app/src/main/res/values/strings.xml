@@ -1,25 +1,27 @@
 <resources>
     <string name="app_name">1 proect</string>
-    <string name="welcome">Welcome Back!</string>
-    <string name="name">Enter your email</string>
-    <string name="password">Confirm password</string>
-    <string name="forgot">Forgot Password!</string>
-    <string name="haveAnAccount">Don’t have an account?</string>
-    <string name="sign">SignUp</string>
-    <string name="singButton">Sign In</string>
-    <string name="slashGet">Let’s get things done on time</string>
-    <string name="startText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor, est a aliquam. Pretium netus </string>
-    <string name="start">Get Started</string>
-    <string name="welcomeOnboard">Welcome Onboard!</string>
-    <string name="registrationIssue">We help you meet up you tasks on time.</string>
-    <string name="register">Register</string>
-    <string name="enterPassword">Enter password</string>
-    <string name="fullName">Enter your full name</string>
-    <string name="issue2">Already have an account?</string>
-    <string name="welcomeHome">Welcome</string>
-    <string name="list">Tasks List</string>
-    <string name="validEmail1">Проверьте правильность написания или длину почты</string>
-    <string name="validPass">Проверьте длину пароля</string>
-    <string name="validPass2">Пароли не совпадают</string>
+    <string name="login_greeting">Welcome Back!</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="login_password_hint">Confirm password</string>
+    <string name="login_password_recovery">Forgot Password!</string>
+    <string name="login_question_registration">Don’t have an account?</string>
+    <string name="login_sign_hint">Sign Up</string>
+    <string name="sing_button">Sign In</string>
+    <string name="splash_greeting">Let’s get things done on time</string>
+    <string name="splash_start_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Tellus praesent purus tincidunt ut cursus vitae. Nisl, vitae nulla lectus tortor,
+        est a aliquam. Pretium netus </string>
+    <string name="splash_button">Get Started</string>
+    <string name="registration_greeting">Welcome Onboard!</string>
+    <string name="registration_greeting_hint">We help you meet up you tasks on time.</string>
+    <string name="registration_button">Register</string>
+    <string name="registration_password_hint">Enter password</string>
+    <string name="registration_name_hint">Enter your full name</string>
+    <string name="registration_issue_account">Already have an account?</string>
+    <string name="home_greeting">Welcome</string>
+    <string name="home_heading">Tasks List</string>
+    <string name="error_email">Проверьте правильность написания или длину почты</string>
+    <string name="error_password">Проверьте длину пароля</string>
+    <string name="error_coincidence_password">Пароли не совпадают</string>
+    <string name="error_emptiness">Поле пустое, введите текст)</string>
 </resources>

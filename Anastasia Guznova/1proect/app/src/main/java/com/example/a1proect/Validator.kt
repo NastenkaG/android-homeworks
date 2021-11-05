@@ -1,9 +1,15 @@
 package com.example.a1proect
 
+
+
 class Validator {
     fun validateEmail(email: String): Boolean {
-        if (!(email.contains("@")) and (email.length <= 6)) return true
-        else return false
+        if (email == "") {
+
+            return false
+        }
+        else if (!(email.contains("@")) and (email.length <= 6)) return true
+            else return false
     }
     fun validatePassword(password: String): Boolean {
         if (password.length <= 7) return true
