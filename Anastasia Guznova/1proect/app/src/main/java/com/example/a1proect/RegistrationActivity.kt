@@ -18,7 +18,8 @@ class RegistrationActivity : AppCompatActivity() {
             val email = binding.textEmailRegistration.text.toString()
             when {
                 valid.validateEmail(email) ->
-                    binding.textEmailRegistration.error = getString(R.string.error_email)
+                    binding.textEmailRegistration.error =
+                        getString(R.string.error_email)
                 valid.validatePassword(password) ->
                     binding.textPasswordEnter.error = getString(R.string.error_password)
                 valid.validateIdenticalPassword(password, repeatedPassword) ->
