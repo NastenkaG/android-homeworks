@@ -3,7 +3,6 @@ package com.example.a1proect
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.a1proect.databinding.ActivityRegistrationBinding
 
 class RegistrationActivity : AppCompatActivity() {
@@ -21,13 +20,13 @@ class RegistrationActivity : AppCompatActivity() {
             binding.textPasswordEnter.error = valid.validatePassword(password)
             binding.textPasswordConfirm.error =
                 valid.validateIdenticalPassword(password, repeatedPassword)
-            if (valid.validateEmail(email) == null && valid.validatePassword(password) == null
-                && valid.validateIdenticalPassword(password, repeatedPassword) == null) {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("Name", email)
-                    startActivity(intent)
-                }
+            if (valid.validateEmail(email) == null && valid.validatePassword(password) == null &&
+                valid.validateIdenticalPassword(password, repeatedPassword) == null) {
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Name", email)
+                startActivity(intent)
             }
+        }
         binding.regSignUpClick.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
