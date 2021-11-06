@@ -20,7 +20,8 @@
     <string name="registration_issue_account">Already have an account?</string>
     <string name="home_greeting">Welcome</string>
     <string name="home_heading">Tasks List</string>
-    <string name="error_email">Проверьте правильность написания или длину почты</string>
+    <string name="error_email_writing">Проверьте правильность написания почты</string>
+    <string name="error_email_length">Проверьте длину почты</string>
     <string name="error_password">Проверьте длину пароля</string>
     <string name="error_coincidence_password">Пароли не совпадают</string>
     <string name="error_emptiness">Поле пустое, введите текст)</string>

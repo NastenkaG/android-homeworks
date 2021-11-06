@@ -12,20 +12,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.logButton.setOnClickListener {
-            val valid = Validator()
-            val email = binding.logTextInputEditEmail.text.toString()
+            val valid = Validator(this)
             val password = binding.logTextInputEditPassword.text.toString()
-            when {
-                valid.validateEmail(email) ->
-                    binding.logTextInputEditEmail.error = getString(R.string.error_email)
-                valid.validatePassword(password) ->
-                    binding.logTextInputEditPassword.error = getString(R.string.error_password)
-
-                else -> {
-                    val intent = Intent(this, HomeActivity::class.java)
-                    intent.putExtra("Name", email)
-                    startActivity(intent)
-                }
+            val email = binding.logTextInputEditEmail.text.toString()
+            binding.logTextInputEditEmail.error = valid.validateEmail(email)
+            binding.logTextInputEditPassword.error = valid.validatePassword(password)
+            if (valid.validateEmail(email) == null && valid.validatePassword(password) == null) {
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Name", email)
+                startActivity(intent)
             }
         }
         binding.singUpRegistration.setOnClickListener {
