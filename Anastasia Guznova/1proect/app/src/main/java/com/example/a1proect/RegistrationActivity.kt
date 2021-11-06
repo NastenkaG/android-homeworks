@@ -21,7 +21,8 @@ class RegistrationActivity : AppCompatActivity() {
             binding.textPasswordConfirm.error =
                 valid.validateIdenticalPassword(password, repeatedPassword)
             if (valid.validateEmail(email) == null && valid.validatePassword(password) == null &&
-                valid.validateIdenticalPassword(password, repeatedPassword) == null) {
+                valid.validateIdenticalPassword(password, repeatedPassword) == null
+            ) {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Name", email)
                 startActivity(intent)
