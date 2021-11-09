@@ -106,8 +106,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/registration_name_hint"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -129,7 +129,6 @@
         app:boxStrokeWidth="0dp"
         app:boxStrokeColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regTextInputName">
 
@@ -138,8 +137,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email_hint"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -168,8 +167,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/registration_password_hint"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:inputType="textPassword"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
@@ -200,8 +199,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login_password_hint"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:inputType="textPassword"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
