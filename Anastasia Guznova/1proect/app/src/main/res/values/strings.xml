@@ -25,5 +25,5 @@
     <string name="error_password">Проверьте длину пароля</string>
     <string name="error_coincidence_password">Пароли не совпадают</string>
     <string name="error_emptiness">Поле пустое, введите текст</string>
-    <string name="user_name">%s</string>
+    <string name="error_name">Проверьте свое имя</string>
 </resources>

@@ -26,4 +26,11 @@ class Validator(private val context: Context) {
             else -> null
         }
     }
+    fun validateName(name: String): String? {
+        return when{
+            name.isBlank() -> context.getString(R.string.error_emptiness)
+            name.length <= 4 -> context.getString(R.string.error_name)
+            else -> null
+        }
+    }
 }
