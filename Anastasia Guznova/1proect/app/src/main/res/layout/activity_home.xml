@@ -52,21 +52,10 @@
         android:text="@string/home_greeting"
         android:textColor="@color/black"
         android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="@+id/profImage"
         app:layout_constraintStart_toStartOf="@+id/profImage"
         app:layout_constraintTop_toBottomOf="@+id/profImage" />
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="24dp"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/profImage"
-        app:layout_constraintStart_toEndOf="@+id/profTextWelcome"
-        app:layout_constraintTop_toBottomOf="@+id/profImage" />
 
     <TextView
         android:layout_width="wrap_content"

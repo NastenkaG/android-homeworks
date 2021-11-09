@@ -15,10 +15,13 @@ class MainActivity : AppCompatActivity() {
             val valid = Validator(this)
             val password = binding.logTextInputEditPassword.text.toString()
             val email = binding.logTextInputEditEmail.text.toString()
-            binding.logTextInputEditEmail.error = valid.validateEmail(email)
-            binding.logTextInputEditPassword.error = valid.validatePassword(password)
-            if (valid.validateEmail(email) == null && valid.validatePassword(password) == null) {
+            binding.logTextInputEmail.error = valid.validateEmail(email)
+            binding.logTextInputPassword.error = valid.validatePassword(password)
+            if (binding.logTextInputEmail.error.isNullOrBlank() &&
+                binding.logTextInputPassword.error.isNullOrBlank()
+            ) {
                 val intent = Intent(this, HomeActivity::class.java)
+                val received = intent.extras?.getString(email)
                 intent.putExtra("Name", email)
                 startActivity(intent)
             }

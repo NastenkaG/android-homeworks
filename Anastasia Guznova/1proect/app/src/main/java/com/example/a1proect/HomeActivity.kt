@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val userName = intent.extras?.getString("Name")
-        binding.textViewName.text = userName
+        binding.profTextWelcome.text = getString(R.string.home_greeting, userName)
         binding.iconExit.setOnClickListener {
             finish()
         }

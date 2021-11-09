@@ -16,12 +16,13 @@ class RegistrationActivity : AppCompatActivity() {
             val password = binding.textPasswordEnter.text.toString()
             val repeatedPassword = binding.textPasswordConfirm.text.toString()
             val email = binding.textEmailRegistration.text.toString()
-            binding.textEmailRegistration.error = valid.validateEmail(email)
-            binding.textPasswordEnter.error = valid.validatePassword(password)
-            binding.textPasswordConfirm.error =
+            binding.regTextInputEmail.error = valid.validateEmail(email)
+            binding.regTextInputPasswordEnter.error = valid.validatePassword(password)
+            binding.regTextInputPasswordConfirm.error =
                 valid.validateIdenticalPassword(password, repeatedPassword)
-            if (valid.validateEmail(email) == null && valid.validatePassword(password) == null &&
-                valid.validateIdenticalPassword(password, repeatedPassword) == null
+            if (binding.regTextInputEmail.error.isNullOrBlank() &&
+                binding.regTextInputPasswordEnter.error.isNullOrBlank() &&
+                binding.regTextInputPasswordConfirm.error.isNullOrBlank()
             ) {
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Name", email)
