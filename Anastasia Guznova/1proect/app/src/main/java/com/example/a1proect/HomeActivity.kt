@@ -11,9 +11,27 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val userName = intent.extras?.getString("Name")
-        binding.profTextWelcome.text = getString(R.string.home_greeting, userName)
-        binding.iconExit.setOnClickListener {
-            finish()
+        val fragment = supportFragmentManager.findFragmentById(binding.homeFragmentContainerView.id)
+                as ProfileFragment
+        fragment.email = userName
+        binding.homeBottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.menuFragmentProfile -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.homeFragmentContainerView, ProfileFragment())
+                        .commit()
+                    true
+                }
+                R.id.menuFragmentTaskList -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.homeFragmentContainerView, FragmentTaskList())
+                        .commit()
+                    true
+                }
+                else -> true
+            }
         }
     }
 }
