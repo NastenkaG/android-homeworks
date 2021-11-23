@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 binding.logTextInputPassword.error.isNullOrBlank()
             ) {
                 val intent = Intent(this, HomeActivity::class.java)
+                val received = intent.extras?.getString(email)
                 intent.putExtra("Name", email)
                 startActivity(intent)
             }
