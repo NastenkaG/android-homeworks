@@ -21,17 +21,15 @@ class HomeActivity : AppCompatActivity() {
                         .beginTransaction()
                         .replace(R.id.homeFragmentContainerView, ProfileFragment())
                         .commit()
-                    true
                 }
                 R.id.menuFragmentTaskList -> {
                     supportFragmentManager
                         .beginTransaction()
-                        .replace(R.id.homeFragmentContainerView, FragmentTaskList())
+                        .replace(R.id.homeFragmentContainerView, HomeTasksListFragment())
                         .commit()
-                    true
                 }
-                else -> true
             }
+            true
         }
     }
 }

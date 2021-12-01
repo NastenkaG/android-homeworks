@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.a1proect.databinding.FragmentTaskListBinding
 
-class FragmentTaskList : Fragment() {
+class HomeTasksListFragment : Fragment() {
     lateinit var binding: FragmentTaskListBinding
     override fun onCreateView(
         inflater: LayoutInflater,
