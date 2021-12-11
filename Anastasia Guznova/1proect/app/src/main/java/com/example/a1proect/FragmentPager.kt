@@ -17,8 +17,9 @@ class FragmentPager(private val position: Int) : Fragment() {
         binding = FragmentPagerBinding.inflate(inflater, container, false)
         when (position) {
             0 -> binding.pagerFragmentText.text = getString(R.string.fragment_task_pager_work)
-            1 -> binding.pagerFragmentText.text =
-                getString(R.string.fragment_task_pager_entertainment)
+            1 ->
+                binding.pagerFragmentText.text =
+                    getString(R.string.fragment_task_pager_entertainment)
             2 -> binding.pagerFragmentText.text = getString(R.string.fragment_task_pager_study)
         }
         return binding.root
