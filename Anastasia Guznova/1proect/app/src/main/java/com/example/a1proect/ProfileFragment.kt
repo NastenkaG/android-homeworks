@@ -16,7 +16,7 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
-        binding.profTextWelcome.text = getString(R.string.home_greeting, email)
+        binding.profileCollapsing.title = getString(R.string.home_greeting, email)
         binding.iconExit.setOnClickListener {
             activity?.finish()
         }
