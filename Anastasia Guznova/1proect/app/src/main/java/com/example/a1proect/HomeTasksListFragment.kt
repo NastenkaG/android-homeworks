@@ -17,8 +17,8 @@ class HomeTasksListFragment : Fragment() {
     ): View {
         binding = FragmentTaskListBinding.inflate(inflater, container, false)
         binding.taskFragmentPager?.adapter = MyPagerAdapter(this)
-        TabLayoutMediator(binding.tabLayout, binding.taskFragmentPager){ tab, position ->
-            tab.text = when(position) {
+        TabLayoutMediator(binding.tabLayout, binding.taskFragmentPager) { tab, position ->
+            tab.text = when (position) {
                 0 -> getString(R.string.fragment_task_pager_work)
                 1 -> getString(R.string.fragment_task_pager_entertainment)
                 2 -> getString(R.string.fragment_task_pager_study)
