@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.a1proect.databinding.FragmentPagerBinding
 
-class FragmentPager(private val position: Int) : Fragment() {
+class PagerFragment(private val position: Int) : Fragment() {
     lateinit var binding: FragmentPagerBinding
     override fun onCreateView(
         inflater: LayoutInflater,
