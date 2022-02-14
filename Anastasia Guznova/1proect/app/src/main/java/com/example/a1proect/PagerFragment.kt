@@ -18,7 +18,7 @@ class PagerFragment(private val position: Int) : Fragment() {
         when (position) {
             0 -> RecyclerViewWork()
             1 -> RecyclerViewWork()
-            2 ->  RecyclerViewWork()
+            2 -> RecyclerViewWork()
         }
         return binding.root
     }

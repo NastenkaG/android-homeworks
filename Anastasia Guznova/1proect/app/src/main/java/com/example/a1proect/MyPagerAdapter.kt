@@ -10,8 +10,8 @@ class MyPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         return when (position) {
             0 -> RecyclerViewWork()
             1 -> RecyclerViewWork()
-            2 ->  RecyclerViewWork()
-            else ->  PagerFragment(4)
+            2 -> RecyclerViewWork()
+            else -> PagerFragment(4)
         }
     }
 }

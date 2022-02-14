@@ -44,11 +44,10 @@ class RecyclerViewWork : Fragment() {
                 Task(
                     nameTask = "Print documents",
                     time =
-                        dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss dd.MM.yyyy"))
+                    dateTime.format(DateTimeFormatter.ofPattern("hh:mm:ss dd.MM.yyyy"))
                 )
             )
         }
         return binding.root
     }
-
 }
