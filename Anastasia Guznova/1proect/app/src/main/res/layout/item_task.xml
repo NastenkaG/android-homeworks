@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textColor="@color/black"
-            android:textSize="19sp"
+            android:textSize="18sp"
             android:maxLines="1"
             android:ellipsize="end"
             android:singleLine="true"
