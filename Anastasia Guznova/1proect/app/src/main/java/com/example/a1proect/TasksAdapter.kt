@@ -23,13 +23,13 @@ class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
 
     override fun getItemCount() = items.size
 
-    fun submitList(tasks: List<Task>){
+    fun submitList(tasks: List<Task>) {
         items.clear()
         items.addAll(tasks)
         notifyDataSetChanged()
     }
 
-    fun addItems(task: Task){
+    fun addItems(task: Task) {
         items.add(task)
         notifyItemInserted(items.lastIndex)
     }
