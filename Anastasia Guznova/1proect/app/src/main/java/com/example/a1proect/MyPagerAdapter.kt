@@ -8,10 +8,10 @@ class MyPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> RecyclerViewWork()
-            1 -> RecyclerViewWork()
-            2 -> RecyclerViewWork()
-            else -> PagerFragment(4)
+            0 -> TaskWorkFragment()
+            1 -> TaskWorkFragment()
+            2 -> TaskWorkFragment()
+            else -> TaskWorkFragment()
         }
     }
 }

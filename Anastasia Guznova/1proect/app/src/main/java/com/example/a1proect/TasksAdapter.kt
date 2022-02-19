@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.a1proect.databinding.ItemTaskBinding
 
 class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
-    private val items = mutableListOf<Task>()
+    private val item = mutableListOf<Task>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         return TaskViewHolder(
             ItemTaskBinding.inflate(
@@ -18,19 +18,19 @@ class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        holder.bind(items[position])
+        holder.bind(item[position])
     }
 
-    override fun getItemCount() = items.size
+    override fun getItemCount() = item.size
 
     fun submitList(tasks: List<Task>) {
-        items.clear()
-        items.addAll(tasks)
+        item.clear()
+        item.addAll(tasks)
         notifyDataSetChanged()
     }
 
-    fun addItems(task: Task) {
-        items.add(task)
-        notifyItemInserted(items.lastIndex)
+    fun addItem(task: Task) {
+        item.add(task)
+        notifyItemInserted(item.lastIndex)
     }
 }

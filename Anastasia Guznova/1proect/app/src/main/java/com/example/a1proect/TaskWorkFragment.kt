@@ -11,7 +11,7 @@ import com.example.a1proect.databinding.RecyclerViewWorkBinding
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class RecyclerViewWork : Fragment() {
+class TaskWorkFragment : Fragment() {
     lateinit var binding: RecyclerViewWorkBinding
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -40,7 +40,7 @@ class RecyclerViewWork : Fragment() {
         binding.recyclerViewWork.adapter = adapter
         adapter.submitList(tasks)
         binding.button.setOnClickListener {
-            adapter.addItems(
+            adapter.addItem(
                 Task(
                     nameTask = "Print documents",
                     time =

@@ -16,9 +16,9 @@ class PagerFragment(private val position: Int) : Fragment() {
     ): View {
         binding = FragmentPagerBinding.inflate(inflater, container, false)
         when (position) {
-            0 -> RecyclerViewWork()
-            1 -> RecyclerViewWork()
-            2 -> RecyclerViewWork()
+            0 -> TaskWorkFragment()
+            1 -> TaskWorkFragment()
+            2 -> TaskWorkFragment()
         }
         return binding.root
     }
