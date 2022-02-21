@@ -7,11 +7,6 @@ class MyPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount() = 3
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> TaskWorkFragment()
-            1 -> TaskWorkFragment()
-            2 -> TaskWorkFragment()
-            else -> TaskWorkFragment()
-        }
+        return PagerFragment(position)
     }
 }
