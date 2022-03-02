@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
     }
-    private fun navigateToFragment(fragment: Fragment){
+    private fun navigateToFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.homeFragmentContainerView, fragment)
@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.iconExit -> {
                 finish()
             }
