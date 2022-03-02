@@ -53,14 +53,6 @@
                 android:background="@android:color/transparent"
                 app:layout_collapseMode="pin"/>
 
-            <ImageView
-                android:id="@+id/iconExit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="30dp"
-                android:layout_marginStart="300dp"
-                android:background="@drawable/exit" />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
