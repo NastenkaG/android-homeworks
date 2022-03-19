@@ -16,7 +16,7 @@ class ProfileFragment : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         val name = activity?.intent?.extras?.getString("Name")
-        binding.profileCollapsing.title = getString(R.string.home_greeting, name)
+        binding.greetingHome.text = getString(R.string.home_greeting, name)
         return binding.root
     }
 }
