@@ -31,5 +31,8 @@
     <string name="fragment_task_pager_work">Work</string>
     <string name="fragment_task_pager_entertainment">Entertainment</string>
     <string name="fragment_task_pager_study">Study</string>
+    <string name="nav_open_drawer">Open navigation drawer</string>
+    <string name="nav_close_drawer">Close navigation drawer</string>
+    <string name="text_exit">Exit</string>
 
 </resources>
