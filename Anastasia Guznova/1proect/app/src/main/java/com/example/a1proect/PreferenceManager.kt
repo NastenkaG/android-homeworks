@@ -4,7 +4,7 @@ import android.content.Context
 
 class PreferenceManager(private val context: Context?) {
 
-    companion object{
+    companion object {
         private const val PREFERENCES_NAME = "entrance"
         private const val KEY_EMAIL = "email"
     }

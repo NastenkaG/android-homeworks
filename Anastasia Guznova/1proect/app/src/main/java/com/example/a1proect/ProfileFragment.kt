@@ -21,7 +21,7 @@ class ProfileFragment : Fragment() {
 //        if (preferenceManager.readFromPreferenceEmail().isNotEmpty())
 //            binding.greetingHome.text = getString(R.string.home_greeting, preferenceManager.readFromPreferenceEmail())
 //        else
-            binding.greetingHome.text = getString(R.string.home_greeting, name)
+        binding.greetingHome.text = getString(R.string.home_greeting, name)
 
         return binding.root
     }

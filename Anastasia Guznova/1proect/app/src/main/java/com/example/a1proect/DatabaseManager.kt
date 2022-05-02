@@ -24,7 +24,7 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(
             "CREATE TABLE $TABLE_NAME_TASKS" +
-            "(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)"
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)"
         )
     }
 
@@ -78,7 +78,7 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(
         )
         val tasks = mutableListOf<Task>()
         with(cursor) {
-            if (moveToFirst()){
+            if (moveToFirst()) {
                 do {
                     tasks.add(
                         Task(
