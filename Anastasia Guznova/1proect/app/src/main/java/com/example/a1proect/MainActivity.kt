@@ -12,18 +12,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.logButton.setOnClickListener {
+            val preferenceManager = PreferenceManager(this)
             val valid = Validator(this)
             val password = binding.logTextInputEditPassword.text.toString()
             val email = binding.logTextInputEditEmail.text.toString()
             binding.logTextInputEmail.error = valid.validateEmail(email)
             binding.logTextInputPassword.error = valid.validatePassword(password)
+            fun signIn(email: String) {
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Name", email)
+                startActivity(intent)
+            }
             if (binding.logTextInputEmail.error.isNullOrBlank() &&
                 binding.logTextInputPassword.error.isNullOrBlank()
             ) {
-                val intent = Intent(this, HomeActivity::class.java)
-                val received = intent.extras?.getString(email)
-                intent.putExtra("Name", email)
-                startActivity(intent)
+                preferenceManager.writeToPreferencesEmail(email)
+                signIn(email)
             }
         }
         binding.singUpRegistration.setOnClickListener {
