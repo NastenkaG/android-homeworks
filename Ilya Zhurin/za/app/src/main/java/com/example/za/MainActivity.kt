@@ -11,21 +11,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.MainSignButton.setOnClickListener {
-            val password = binding.editTextPasswordLogin.text.toString()
-            val email = binding.editTextEmailLogin.text.toString()
+        binding.ButtonSignMain.setOnClickListener {
+            val password = binding.editTextPasswordLoginMain.text.toString()
+            val email = binding.editTextEmailLoginMain.text.toString()
             val valid = Validator(this)
-            binding.inputLayoutEmailLogin.error = valid.checkEmail(email)
-            binding.inputLayoutPasswordLogin.error = valid.checkPassword(password)
-            if (binding.inputLayoutEmailLogin.error == null &&
-                binding.inputLayoutPasswordLogin.error == null
+            binding.inputLayoutEmailLoginMain.error = valid.checkEmail(email)
+            binding.inputLayoutEmailLoginMain.error = valid.checkPassword(password)
+            if (binding.inputLayoutEmailLoginMain.error == null &&
+                binding.inputLayoutPasswordLoginMain.error == null
             ) {
                 val intent = Intent(this, ProfileActivity::class.java)
                 intent.putExtra("Name", email)
                 startActivity(intent)
             }
         }
-        binding.mainTextSingnUp.setOnClickListener {
+        binding.textViewSignUpMain.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }

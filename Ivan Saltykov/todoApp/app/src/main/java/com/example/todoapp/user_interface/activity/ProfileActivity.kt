@@ -1,4 +1,4 @@
-package com.example.todoapp
+package com.example.todoapp.user_interface.activity
 
 import android.os.Bundle
 import android.view.Menu
@@ -7,15 +7,20 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import com.example.todoapp.R
 import com.example.todoapp.databinding.ActivityProfileBinding
+import com.example.todoapp.preferences.PreferencesManager
+import com.example.todoapp.user_interface.fragment.ProfileFragment
+import com.example.todoapp.user_interface.fragment.TasksFragment
 
 class ProfileActivity : AppCompatActivity() {
     lateinit var binding: ActivityProfileBinding
-
+    lateinit var preferences: PreferencesManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        preferences = PreferencesManager(this)
         setSupportActionBar(binding.toolbarProfile)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         binding.navigationView.setNavigationItemSelectedListener { menuitem ->
@@ -42,7 +47,10 @@ class ProfileActivity : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.itemToolbarProfileExit -> finish()
+            R.id.itemToolbarProfileExit -> {
+                preferences.clearPreferences()
+                finish()
+            }
         }
         return true
     }

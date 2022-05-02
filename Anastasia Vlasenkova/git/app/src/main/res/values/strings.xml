@@ -30,5 +30,7 @@
     <string name="fragment_home_menu_tasks_list">Tasks List</string>
     <string name="pager_work">Work</string>
     <string name="pager_study">Study</string>
+    <string name="nav_open">Open navigation drawer</string>
+    <string name="nav_close">Close navigation drawer</string>
     <string name="pager_entertainment">Entertainment</string>
 </resources>

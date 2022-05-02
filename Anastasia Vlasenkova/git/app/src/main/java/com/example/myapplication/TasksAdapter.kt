@@ -1,27 +1,34 @@
-package com.example.todoapp
+package com.example.myapplication
 
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
-import com.example.todoapp.databinding.ItemTaskBinding
+import com.example.myapplication.databinding.ItemTaskBinding
 
 class TasksAdapter : RecyclerView.Adapter<TaskViewHolder>() {
-    var items = mutableListOf<Task>()
+
+    private val items = mutableListOf<Task>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         return TaskViewHolder(
-            ItemTaskBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemTaskBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
         )
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         holder.bind(items[position])
     }
 
     override fun getItemCount() = items.size
 
-    fun submitList(task: List<Task>) {
+    fun submitList(tasks: List<Task>) {
         items.clear()
-        items.addAll(task)
+        items.addAll(tasks)
         notifyDataSetChanged()
     }
 

@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewWelcomeMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/MainSign_button"
+        android:id="@+id/ButtonSignMain"
         android:layout_width="309dp"
         android:layout_height="64dp"
         android:layout_marginTop="4dp"
@@ -37,17 +37,17 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/main_photos"
+        android:id="@+id/imageViewPhotosMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:srcCompat="@drawable/ic_pictere1" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewWelcomeMain"
+        app:layout_constraintStart_toStartOf="@+id/textViewWelcomeMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWelcomeMain"
+        app:srcCompat="@drawable/ic_picture1" />
 
     <TextView
-        android:id="@+id/main_text_dont_have"
+        android:id="@+id/textViewHaveMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -57,13 +57,13 @@
         android:gravity="center"
         android:text="@string/don_t_have_an_account"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/MainSign_button"
+        app:layout_constraintEnd_toEndOf="@+id/ButtonSignMain"
         app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="@+id/MainSign_button"
-        app:layout_constraintTop_toBottomOf="@+id/MainSign_button" />
+        app:layout_constraintStart_toStartOf="@+id/ButtonSignMain"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonSignMain" />
 
     <TextView
-        android:id="@+id/main_text_singn_up"
+        android:id="@+id/textViewSignUpMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -71,12 +71,12 @@
         android:gravity="center"
         android:text="@string/sign_up"
         android:textColor="@color/yellow"
-        app:layout_constraintEnd_toEndOf="@+id/main_text_dont_have"
-        app:layout_constraintStart_toStartOf="@+id/main_text_dont_have"
-        app:layout_constraintTop_toBottomOf="@+id/main_text_dont_have" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewHaveMain"
+        app:layout_constraintStart_toStartOf="@+id/textViewHaveMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHaveMain" />
 
     <ImageView
-        android:id="@+id/main_elipse_left"
+        android:id="@+id/imageViewEllipseRegistrationMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +84,7 @@
         app:srcCompat="@drawable/ic_eclipse_left" />
 
     <ImageView
-        android:id="@+id/main_elipse_top"
+        android:id="@+id/imageViewEllipseTopRegistrationMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
          />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutEmailLogin"
+        android:id="@+id/inputLayoutEmailLoginMain"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -106,13 +106,13 @@
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
         app:boxStrokeWidth="0dp"
-        app:layout_constraintEnd_toEndOf="@+id/main_photos"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPhotosMain"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/main_photos"
-        app:layout_constraintTop_toBottomOf="@+id/main_photos">
+        app:layout_constraintStart_toStartOf="@+id/imageViewPhotosMain"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPhotosMain">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEmailLogin"
+            android:id="@+id/editTextEmailLoginMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_your_email_main"
@@ -123,7 +123,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayoutPasswordLogin"
+        android:id="@+id/inputLayoutPasswordLoginMain"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,12 +138,12 @@
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopStart="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputLayoutEmailLogin"
-        app:layout_constraintStart_toStartOf="@+id/inputLayoutEmailLogin"
-        app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmailLogin">
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutEmailLoginMain"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutEmailLoginMain"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutEmailLoginMain">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPasswordLogin"
+            android:id="@+id/editTextPasswordLoginMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -158,9 +158,9 @@
         android:fontFamily="@font/poppins_bold"
         android:text="@string/password_hint"
         android:textColor="@color/yellow"
-        app:layout_constraintEnd_toEndOf="@+id/inputLayoutPasswordLogin"
-        app:layout_constraintStart_toStartOf="@+id/inputLayoutPasswordLogin"
-        app:layout_constraintTop_toBottomOf="@+id/inputLayoutPasswordLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutPasswordLoginMain"
+        app:layout_constraintStart_toStartOf="@+id/inputLayoutPasswordLoginMain"
+        app:layout_constraintTop_toBottomOf="@+id/inputLayoutPasswordLoginMain" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment"
+    tools:context=".user_interface.fragment.ProfileFragment"
     android:background="@color/background">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,7 +19,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/white"
             app:expandedTitleTextAppearance="@style/titleProfile"
-            app:expandedTitleGravity="center_horizontal|bottom" >
+            app:expandedTitleGravity="center_horizontal|bottom">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -66,7 +67,6 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="60dp"
                         android:layout_marginTop="60dp"/>
-                        android:layout_marginBottom="60dp"/>
 
                 </LinearLayout>
 
@@ -76,7 +76,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
                 android:background="@android:color/transparent"
-                app:layout_collapseMode="pin" />
+                app:layout_collapseMode="pin"
+                app:titleMarginStart="30dp"
+                app:titleMarginEnd="35dp"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

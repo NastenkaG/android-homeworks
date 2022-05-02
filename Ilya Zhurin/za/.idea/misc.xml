@@ -43,6 +43,14 @@
         <entry key="..\:/android-homeworks-main/Ilya Zhurin/za/app/src/main/res/layout/fragment_tasks.xml" value="0.17882472137791286" />
         <entry key="..\:/android-homeworks-main/Ilya Zhurin/za/app/src/main/res/layout/fragment_two.xml" value="0.17882472137791286" />
         <entry key="..\:/android-homeworks-main/Ilya Zhurin/za/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3880208333333333" />
+        <entry key="..\:/za/app/src/main/res/layout/activity_get_started.xml" value="0.2128623188405797" />
+        <entry key="..\:/za/app/src/main/res/layout/activity_main.xml" value="0.1641337386018237" />
+        <entry key="..\:/za/app/src/main/res/layout/activity_profile.xml" value="0.1641337386018237" />
+        <entry key="..\:/za/app/src/main/res/layout/activity_registration.xml" value="0.2128623188405797" />
+        <entry key="..\:/za/app/src/main/res/layout/fragment_pager.xml" value="0.2128623188405797" />
+        <entry key="..\:/za/app/src/main/res/layout/fragment_profile.xml" value="0.18" />
+        <entry key="..\:/za/app/src/main/res/layout/fragment_tasks.xml" value="0.1641337386018237" />
+        <entry key="..\:/za/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3323076923076923" />
       </map>
     </option>
   </component>

@@ -11,12 +11,12 @@ class RegistrationActivity : AppCompatActivity() {
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.RegisterButton.setOnClickListener {
+        binding.ButtonRegistration.setOnClickListener {
             val valid = Validator(this)
-            val email = binding.editTextEmail.text.toString()
-            val password = binding.editTextPassword.text.toString()
-            val username = binding.editTextName.text.toString()
-            val confimPassword = binding.editTextConfirmPassword.text.toString()
+            val email = binding.editTextEmailRegistration.text.toString()
+            val password = binding.editTextConfirmPasswordRegistration.text.toString()
+            val username = binding.editTextNameRegistration.text.toString()
+            val confimPassword = binding.editTextConfirmPasswordRegistration.text.toString()
 
             binding.inputLayoutEmailRegistration.error = valid.checkEmail(email)
             binding.inputLayoutPasswordRegistration.error = valid.checkPassword(password)
@@ -33,7 +33,7 @@ class RegistrationActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        binding.textViewRegisterSingIn.setOnClickListener {
+        binding.textViewSingInRegister.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }

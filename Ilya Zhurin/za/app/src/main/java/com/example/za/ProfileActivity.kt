@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
+        binding.bottomNavigationViewProfile.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.profileItemMenu -> {
                     supportFragmentManager

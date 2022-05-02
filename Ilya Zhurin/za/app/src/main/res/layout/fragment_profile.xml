@@ -1,65 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/profileCollapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="@string/profile_greeting"
+            app:contentScrim="@color/yellow"
+            android:background="@color/yellow"
+            android:scrollbarSize="30dp">
+
         <ImageView
-            android:id="@+id/profilebackground"
+            android:id="@+id/imageViewBackgroundProfileFragment"
             android:layout_width="422dp"
             android:layout_height="224dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_profilethems"
+            android:src="@drawable/ic_profile_themes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/profile_elipse"
+            android:id="@+id/imageViewEllipseProfileFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_elipce_legsg"
+            android:src="@drawable/ic_ellipse_left"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/profile_elipse_top"
+            android:id="@+id/imageViewEllipseTopProfileFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_elepcic_top12"
+            android:src="@drawable/ic_ellipse_top12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/profile_photos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="87dp"
-            android:src="@drawable/ic_photo_profile"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/profilebackground" />
+                <ImageView
+                    android:id="@+id/imageViewPhotosProfileFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-10dp"
+                    android:src="@drawable/ic_photo_profile"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewBackgroundProfileFragment" />
 
-        <ImageView
-            android:id="@+id/profile_exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="51dp"
-            android:layout_marginEnd="18dp"
-            android:src="@drawable/ic_exit"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@android:color/transparent"
+            app:layout_collapseMode="pin"/>
+                <ImageView
+                    android:id="@+id/imageViewExitProfileFragment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="30dp"
+                    android:layout_marginStart="350dp"
+                    android:src="@drawable/ic_exit" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/profile_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/welcome_profile"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@+id/profile_photos"
-            app:layout_constraintStart_toStartOf="@+id/profile_photos"
-            app:layout_constraintTop_toBottomOf="@+id/profile_photos" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
