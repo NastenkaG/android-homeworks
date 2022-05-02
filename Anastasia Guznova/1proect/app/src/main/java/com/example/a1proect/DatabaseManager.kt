@@ -9,27 +9,27 @@ import androidx.annotation.RequiresApi
 import java.time.LocalDateTime
 
 class DatabaseManager(context: Context?) : SQLiteOpenHelper(
-        context,
-        DATABASE_NAME,
-        null,
-        DATABASE_VERSION
-    ) {
+     context,
+     DATABASE_NAME,
+     null,
+     DATABASE_VERSION
+) {
 
-    companion object{
+    companion object {
         private const val DATABASE_NAME = "my_database"
         private const val DATABASE_VERSION = 1
         private const val TABLE_NAME_TASKS = "Tasks"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("CREATE TABLE $TABLE_NAME_TASKS(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)")
+        db?.execSQL("CREATE TABLE $TABLE_NAME_TASKS" +
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-
     }
 
-    fun insertTask(task: Task){
+    fun insertTask(task: Task) {
         val timeString = task.time.toString()
         writableDatabase.insert(
             TABLE_NAME_TASKS,
