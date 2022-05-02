@@ -9,10 +9,10 @@ import androidx.annotation.RequiresApi
 import java.time.LocalDateTime
 
 class DatabaseManager(context: Context?) : SQLiteOpenHelper(
-     context,
-     DATABASE_NAME,
-     null,
-     DATABASE_VERSION
+    context,
+    DATABASE_NAME,
+    null,
+    DATABASE_VERSION
 ) {
 
     companion object {
@@ -22,8 +22,10 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("CREATE TABLE $TABLE_NAME_TASKS" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)")
+        db?.execSQL(
+            "CREATE TABLE $TABLE_NAME_TASKS" +
+            "(id INTEGER PRIMARY KEY AUTOINCREMENT, nameTask TEXT, time TEXT)"
+        )
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -63,7 +65,7 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun getTasks(): List<Task>{
+    fun getTasks(): List<Task> {
         val cursor = readableDatabase.query(
             TABLE_NAME_TASKS,
             arrayOf("id", "nameTask", "time"),
@@ -75,7 +77,7 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(
 
         )
         val tasks = mutableListOf<Task>()
-        with(cursor){
+        with(cursor) {
             if (moveToFirst()){
                 do {
                     tasks.add(
