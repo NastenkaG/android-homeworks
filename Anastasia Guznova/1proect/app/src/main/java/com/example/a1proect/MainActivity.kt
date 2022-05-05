@@ -18,16 +18,13 @@ class MainActivity : AppCompatActivity() {
             val email = binding.logTextInputEditEmail.text.toString()
             binding.logTextInputEmail.error = valid.validateEmail(email)
             binding.logTextInputPassword.error = valid.validatePassword(password)
-            fun signIn(email: String) {
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("Name", email)
-                startActivity(intent)
-            }
             if (binding.logTextInputEmail.error.isNullOrBlank() &&
                 binding.logTextInputPassword.error.isNullOrBlank()
             ) {
                 preferenceManager.writeToPreferencesEmail(email)
-                signIn(email)
+                val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("Name", email)
+                startActivity(intent)
             }
         }
         binding.singUpRegistration.setOnClickListener {
