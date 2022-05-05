@@ -17,8 +17,7 @@ class SplashActivity : AppCompatActivity() {
             if (preferenceManager.readFromPreferenceEmail().isNullOrBlank()) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-            }
-            else {
+            } else {
                 val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             }

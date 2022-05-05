@@ -19,7 +19,10 @@ class ProfileFragment : Fragment() {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         val name = activity?.intent?.extras?.getString("Name")
         if (preferenceManager.readFromPreferenceEmail().isNotEmpty())
-            binding.greetingHome.text = getString(R.string.home_greeting, preferenceManager.readFromPreferenceEmail())
+            binding.greetingHome.text = getString(
+                R.string.home_greeting,
+                preferenceManager.readFromPreferenceEmail()
+            )
         else
             binding.greetingHome.text = getString(R.string.home_greeting, name)
 
