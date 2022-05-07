@@ -20,30 +20,18 @@ class PagerFragment(private val position: Int) : Fragment() {
     ): View {
         val dateTime = LocalDateTime.now()
         binding = FragmentPagerBinding.inflate(inflater, container, false)
-        val tasks = listOf(
-            Task(
-                nameTask = "Say Hi dkjhbfdhog shrthrtfglmfngh",
-                time = dateTime
-            ),
-            Task(
-                nameTask = "Fill out the documents",
-                time = dateTime
-            ),
-            Task(
-                nameTask = "Send documents",
-                time = dateTime
-            )
-        )
+        val databaseManager = DatabaseManager(context)
         val adapter = TasksAdapter()
         binding.recyclerViewWork.adapter = adapter
-        adapter.submitList(tasks)
+        adapter.submitList(databaseManager.getTasks())
         binding.button.setOnClickListener {
-            adapter.addItem(
+            databaseManager.insertTask(
                 Task(
                     nameTask = "Print documents",
                     time = dateTime
                 )
             )
+            adapter.submitList(databaseManager.getTasks())
         }
         return binding.root
     }

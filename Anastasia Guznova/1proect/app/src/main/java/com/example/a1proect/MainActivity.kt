@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.logButton.setOnClickListener {
+            val preferenceManager = PreferenceManager(this)
             val valid = Validator(this)
             val password = binding.logTextInputEditPassword.text.toString()
             val email = binding.logTextInputEditEmail.text.toString()
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
             if (binding.logTextInputEmail.error.isNullOrBlank() &&
                 binding.logTextInputPassword.error.isNullOrBlank()
             ) {
+                preferenceManager.writeToPreferencesEmail(email)
                 val intent = Intent(this, HomeActivity::class.java)
-                val received = intent.extras?.getString(email)
                 intent.putExtra("Name", email)
                 startActivity(intent)
             }

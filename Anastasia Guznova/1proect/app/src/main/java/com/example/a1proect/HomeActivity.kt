@@ -11,11 +11,13 @@ import com.example.a1proect.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
+    private lateinit var preferenceManager: PreferenceManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarHome)
+        preferenceManager = PreferenceManager(this)
         binding.navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menuFragmentProfile -> navigateToFragment(ProfileFragment())
@@ -47,6 +49,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.iconExit -> {
+                preferenceManager.clearPreference()
                 finish()
             }
         }
