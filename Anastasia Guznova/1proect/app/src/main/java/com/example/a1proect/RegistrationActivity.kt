@@ -13,6 +13,7 @@ class RegistrationActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.regButton.setOnClickListener {
             val valid = Validator(this)
+            val preferenceManager = PreferenceManager(this)
             val password = binding.textPasswordEnter.text.toString()
             val repeatedPassword = binding.textPasswordConfirm.text.toString()
             val email = binding.textEmailRegistration.text.toString()
@@ -27,6 +28,7 @@ class RegistrationActivity : AppCompatActivity() {
                 binding.regTextInputPasswordConfirm.error.isNullOrBlank() &&
                 binding.regTextInputName.error.isNullOrBlank()
             ) {
+                preferenceManager.writeToPreferencesEmail(email)
                 val intent = Intent(this, HomeActivity::class.java)
                 intent.putExtra("Name", email)
                 startActivity(intent)
