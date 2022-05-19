@@ -31,5 +31,10 @@
     <string name="error_empty">The field must not be empty</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_tasks">Tasks</string>
+    <string name="profile_fragment_title">Profile</string>
+    <string name="tasks_title">Tasks List</string>
+    <string name="task_work">Work</string>
+    <string name="task_entertainment">Entertainment</string>
+    <string name="task_study">Study</string>
 
 </resources>
