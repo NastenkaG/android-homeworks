@@ -3,6 +3,7 @@ package com.example.a1proect
 import com.google.gson.annotations.SerializedName
 
 data class GettingTasks(
+
 @field:SerializedName("id")
 val id: Int,
 
@@ -14,4 +15,5 @@ val isCompleted: Boolean,
 
 @field:SerializedName("userId")
 val userId: Int
+
 )
