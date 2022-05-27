@@ -8,7 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AddTaskActivity: AppCompatActivity() {
+class AddTaskActivity : AppCompatActivity() {
     lateinit var binding: ActivityAddTaskBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,15 +22,18 @@ class AddTaskActivity: AppCompatActivity() {
             ApiService.retrofit.putTask(
                 AddTask(binding.logTextInputEditTask.text.toString()),
                 "Bearer ${preferenceManager.readFromPreferenceToken()}"
-            ).enqueue(object: Callback<Unit>{
+            ).enqueue(object : Callback<Unit> {
                 override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
-                    Toast.makeText(this@AddTaskActivity, "Добавлено", Toast.LENGTH_SHORT).show()
-
+                    Toast.makeText(this@AddTaskActivity,
+                        "Добавлено",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
-
                 override fun onFailure(call: Call<Unit>, t: Throwable) {
-                    Toast.makeText(this@AddTaskActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
-
+                    Toast.makeText(this@AddTaskActivity,
+                        t.localizedMessage,
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             })
             finish()
