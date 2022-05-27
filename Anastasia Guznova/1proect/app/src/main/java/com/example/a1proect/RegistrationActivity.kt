@@ -34,7 +34,7 @@ class RegistrationActivity : AppCompatActivity() {
             ) {
                 ApiService.retrofit.registrationUser(
                     RegistrationUser(password, name, email)
-                ).enqueue(object : Callback<Token>  {
+                ).enqueue(object : Callback<Token> {
                     override fun onResponse(call: Call<Token>, response: Response<Token>) {
                         if (response.isSuccessful) {
                             preferenceManager.writeToPreferencesToken(
@@ -45,7 +45,11 @@ class RegistrationActivity : AppCompatActivity() {
                                 this@RegistrationActivity,
                                 HomeActivity::class.java
                             )
-                            Toast.makeText(this@RegistrationActivity, "ok", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                this@RegistrationActivity,
+                                "ok",
+                                Toast.LENGTH_SHORT
+                            ).show()
                             intent.putExtra("Name", email)
                             startActivity(intent)
 //                            finish()
@@ -63,7 +67,7 @@ class RegistrationActivity : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                } )
+                })
             }
         }
         binding.regSignUpClick.setOnClickListener {

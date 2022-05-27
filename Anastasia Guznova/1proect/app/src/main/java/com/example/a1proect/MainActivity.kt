@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
                             ).show()
                         }
                     })
-                }
             }
+        }
 
         binding.singUpRegistration.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
