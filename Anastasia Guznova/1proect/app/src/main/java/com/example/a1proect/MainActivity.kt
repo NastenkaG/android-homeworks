@@ -26,41 +26,41 @@ class MainActivity : AppCompatActivity() {
                 binding.logTextInputPassword.error.isNullOrBlank()
             ) {
 
-                    ApiService.retrofit.loginUser(LoginUser(password, email))
-                        .enqueue(object : Callback<Token> {
-                            override fun onResponse(call: Call<Token>, response: Response<Token>) {
-                                if (response.isSuccessful) {
-                                    preferenceManager.writeToPreferencesEmail(email)
-                                    preferenceManager.writeToPreferencesToken(
-                                        response.body()?.token.toString()
-                                    )
-                                    val intent = Intent(
-                                        this@MainActivity,
-                                        HomeActivity::class.java
-                                    )
-                                    intent.putExtra("Name", email)
-                                    startActivity(intent)
-                                } else {
-                                    when (response.code()) {
-                                        400 -> Toast.makeText(
-                                            this@MainActivity, "Проблемы при входе в аккаунт",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                        401 -> Toast.makeText(
-                                            this@MainActivity, "Некорректные данные входа",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-                                    }
+                ApiService.retrofit.loginUser(LoginUser(password, email))
+                    .enqueue(object : Callback<Token> {
+                        override fun onResponse(call: Call<Token>, response: Response<Token>) {
+                            if (response.isSuccessful) {
+                                preferenceManager.writeToPreferencesEmail(email)
+                                preferenceManager.writeToPreferencesToken(
+                                    response.body()?.token.toString()
+                                )
+                                val intent = Intent(
+                                    this@MainActivity,
+                                    HomeActivity::class.java
+                                )
+                                intent.putExtra("Name", email)
+                                startActivity(intent)
+                            } else {
+                                when (response.code()) {
+                                    400 -> Toast.makeText(
+                                        this@MainActivity, "Проблемы при входе в аккаунт",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                    401 -> Toast.makeText(
+                                        this@MainActivity, "Некорректные данные входа",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
                                 }
                             }
+                        }
 
-                            override fun onFailure(call: Call<Token>, t: Throwable) {
-                                Toast.makeText(
-                                    this@MainActivity, "Error",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        })
+                        override fun onFailure(call: Call<Token>, t: Throwable) {
+                            Toast.makeText(
+                                this@MainActivity, "Error",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    })
                 }
             }
 
