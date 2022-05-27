@@ -24,13 +24,15 @@ class AddTaskActivity : AppCompatActivity() {
                 "Bearer ${preferenceManager.readFromPreferenceToken()}"
             ).enqueue(object : Callback<Unit> {
                 override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
-                    Toast.makeText(this@AddTaskActivity,
+                    Toast.makeText(
+                        this@AddTaskActivity,
                         "Добавлено",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
                 override fun onFailure(call: Call<Unit>, t: Throwable) {
-                    Toast.makeText(this@AddTaskActivity,
+                    Toast.makeText(
+                        this@AddTaskActivity,
                         t.localizedMessage,
                         Toast.LENGTH_SHORT
                     ).show()
