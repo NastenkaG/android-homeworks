@@ -15,7 +15,7 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        preferenceManager = PreferenceManager(context)
+        preferenceManager = PreferenceManager(requireContext())
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         val name = activity?.intent?.extras?.getString("Name")
         if (preferenceManager.readFromPreferenceEmail().isNotEmpty())

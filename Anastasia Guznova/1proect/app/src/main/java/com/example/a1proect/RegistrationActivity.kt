@@ -2,8 +2,12 @@ package com.example.a1proect
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.a1proect.databinding.ActivityRegistrationBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RegistrationActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegistrationBinding
@@ -28,10 +32,38 @@ class RegistrationActivity : AppCompatActivity() {
                 binding.regTextInputPasswordConfirm.error.isNullOrBlank() &&
                 binding.regTextInputName.error.isNullOrBlank()
             ) {
-                preferenceManager.writeToPreferencesEmail(email)
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("Name", email)
-                startActivity(intent)
+                ApiService.retrofit.registrationUser(
+                    RegistrationUser(password, name, email)
+                ).enqueue(object : Callback<Token>  {
+                    override fun onResponse(call: Call<Token>, response: Response<Token>) {
+                        if (response.isSuccessful) {
+                            preferenceManager.writeToPreferencesToken(
+                                response.body()?.token.toString()
+                            )
+                            preferenceManager.writeToPreferencesEmail(email)
+                            val intent = Intent(
+                                this@RegistrationActivity,
+                                HomeActivity::class.java
+                            )
+                            Toast.makeText(this@RegistrationActivity, "ok", Toast.LENGTH_SHORT).show()
+                            intent.putExtra("Name", email)
+                            startActivity(intent)
+//                            finish()
+                        } else
+                            Toast.makeText(
+                                this@RegistrationActivity,
+                                "Error",
+                                Toast.LENGTH_LONG
+                            ).show()
+                    }
+                    override fun onFailure(call: Call<Token>, t: Throwable) {
+                        Toast.makeText(
+                            this@RegistrationActivity,
+                            t.message,
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+                } )
             }
         }
         binding.regSignUpClick.setOnClickListener {
@@ -40,3 +72,5 @@ class RegistrationActivity : AppCompatActivity() {
         }
     }
 }
+
+

@@ -34,5 +34,9 @@
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
     <string name="text_exit">Exit</string>
+    <string name="text_done">Done</string>
+    <string name="task_hint">Task</string>
+    <string name="date_hint">Enter date</string>
+    <string name="time_hint">Enter time</string>
 
 </resources>
